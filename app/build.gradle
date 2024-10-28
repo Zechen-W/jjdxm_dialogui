@@ -48,9 +48,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:7.0.1'
-    compile rootProject.ext.jjdxm_recyclerview
-    compile project(':jjdxm-dialogui')
+    implementation files(include: ['*.jar'], dir: 'libs')
+    testImplementation  'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation rootProject.ext.jjdxm_recyclerview
+    implementation project(':jjdxm-dialogui')
+}
+android {
+    namespace 'com.bupt.namespace'
 }
